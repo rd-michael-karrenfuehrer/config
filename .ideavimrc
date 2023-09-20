@@ -1,0 +1,94 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=8
+
+set incsearch
+set ignorecase
+set smartcase
+set showmode
+set ideastrictmode
+
+"set line numbers to relativ and current position to the actual line"
+set relativenumber
+set number
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" use intellij join in for ideajoin in order to have a smart join"
+:set ideajoin
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+set surround
+set ideajoin
+set highlightedyankq
+set commentary
+set NERDTree
+
+" --- Custom mappings
+nnoremap gp :NERDTree <CR>
+nnoremap <Space>z :action ToggleZenMode<CR>
+
+""""""""""""""""""""""""""""""""""""""formatting"""""""""""""""""""""""""""""""""""""
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
+nnoremap ?? :action OptimizeImports<CR>
+vnoremap ?? :action OptimizeImports<CR>
+
+""""""""""""""""""""""""""""""""""""""Comments"""""""""""""""""""""""""""""""""""""
+nnoremap cc :action CommentByLineComment<CR>
+vnoremap cc :action CommentByLineComment<CR>
+
+""""""""""""""""""""""""""""""""""""""Refactoring""""""""""""""""""""""""""""""""""""""
+noremap <Space>re :action RenameElement<CR>
+noremap <Space>ii :action Inline<CR>
+noremap <Space>iv :action IntroduceVariable<CR>
+noremap <Space>ic :action IntroduceConstant<CR>
+noremap <Space>ip :action IntroduceParameter<CR>
+noremap <Space>if :action IntroduceField<CR>
+noremap <Space>ef :action ExtractFunction<CR>
+noremap <Space>gg :action Generate<CR>
+noremap <Space>t :action ActivateTerminalToolWindow<CR>
+
+""""""""""""""""""""""""""""""""""""""Split Window"""""""""""""""""""""""""""""""""""""
+nnoremap <Space>sv :action SplitVertically<CR>
+nnoremap <Space>sh :action SplitHorizontally<CR>
+nnoremap <Space>sc :action UnsplitAll<CR>
+noremap <Space>v :action NextSplitter<CR>
+
+"""""""""""""""""""""""""""""""""""""" Window"""""""""""""""""""""""""""""""""""""
+nnoremap <Space>wd :action ActivateDebugToolWindow<CR>
+nnoremap <Space>wr :action ActivateRunToolWindow<CR>
+noremap <Space><Space> :action HideAllWindows<CR>
+
+""""""""""""""""""""""""""""""""""""""Navigation"""""""""""""""""""""""""""""""""""""
+noremap <Space>nw :action NextProjectWindow<CR>
+noremap <Space>pw :action PreviousProjectWindow<CR>
+noremap <Space>cv :action ChangeView<CR>
+noremap <Space>tt mm`m:action GotoTest<CR>
+
+""""""""""""""""""""""""""""""""""""""Project""""""""""""""""""""""""""""""""""""""
+noremap <Space>cP :action CloseProject<CR>
+noremap <Space>CP :action CloseProject<CR>
+noremap <Space>oP :action OpenFile<CR>
+noremap <Space>OP :action OpenFile<CR>
+noremap <Space>nP :action NewProject<CR>
+noremap <Space>NP :action NewProject<CR>
+noremap <Space>sf :action SelectInProjectView<CR>
+
+""""""""""""""""""""""""""""""""""""""Run""""""""""""""""""""""""""""""""""""""
+nnoremap <Space>rc :action RunConfiguration<CR>
+noremap <Space>rr :action Run<CR>
+noremap <Space>rn :action RunClass<CR>
+noremap <Space>dd :action Debug<CR>
+noremap <Space>dn :action DebugClass<CR>
+noremap <Space>sp :action Stop<CR>
+
+" Reload .ideavimrc without restarting the IDE
+nmap <Space>ir <Action>(IdeaVim.ReloadVimRc.reload)
