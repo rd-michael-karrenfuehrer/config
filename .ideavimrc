@@ -13,6 +13,8 @@ set ignorecase
 set smartcase
 set showmode
 set ideastrictmode
+set visualbell
+set noerrorbells
 
 "set line numbers to relativ and current position to the actual line"
 set relativenumber
@@ -20,9 +22,6 @@ set number
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
-
-" use intellij join in for ideajoin in order to have a smart join"
-:set ideajoin
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 set surround
@@ -81,6 +80,7 @@ noremap <Space>OP :action OpenFile<CR>
 noremap <Space>nP :action NewProject<CR>
 noremap <Space>NP :action NewProject<CR>
 noremap <Space>mp :action ManageRecentProjects<CR>
+noremap <Space>mg :action MergeAllWindowsAction<CR>
 
 """"""""""""""""""""""""""""""""""""Run""""""""""""""""""""""""""""""""""""""
 nnoremap <Space>rc :action RunConfiguration<CR>
