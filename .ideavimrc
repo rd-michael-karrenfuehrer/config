@@ -15,6 +15,7 @@ set showmode
 set ideastrictmode
 set visualbell
 set noerrorbells
+set idearefactormode=keep
 
 "set line numbers to relativ and current position to the actual line"
 set relativenumber
