@@ -34,8 +34,9 @@ set NERDTree
 " --- Custom mappings
 nnoremap gp :NERDTree <CR>
 nnoremap <Space>z :action ToggleZenMode<CR>
+nnoremap <Space>r :action RecentFiles<CR>
 
-""""""""""""""""""""""""""""""""""""""formatting"""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""formatting"""""""""""""""""""""""""""""""""""""
 nnoremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
 nnoremap ?? :action OptimizeImports<CR>
@@ -55,6 +56,7 @@ noremap <Space>if :action IntroduceField<CR>
 noremap <Space>ef :action ExtractFunction<CR>
 noremap <Space>gg :action Generate<CR>
 noremap <Space>t :action ActivateTerminalToolWindow<CR>
+noremap <Space>h :action LocalHistory.ShowHistory<CR>
 
 """"""""""""""""""""""""""""""""""""""Split Window"""""""""""""""""""""""""""""""""""""
 nnoremap <Space>sv :action SplitVertically<CR>
@@ -72,14 +74,14 @@ noremap <Space>nw :action NextProjectWindow<CR>
 noremap <Space>pw :action PreviousProjectWindow<CR>
 noremap <Space>cv :action ChangeView<CR>
 noremap <Space>tt mm`m:action GotoTest<CR>
+noremap <Space>cc mm`m:action GotoClass<CR>
+noremap <Space>aa mm`m:action GotoFile<CR>
+noremap <Space>ff mm`m:action SearchEverywhere<CR>
 
 """"""""""""""""""""""""""""""""""""""Project""""""""""""""""""""""""""""""""""""""
-noremap <Space>cP :action CloseProject<CR>
-noremap <Space>CP :action CloseProject<CR>
-noremap <Space>oP :action OpenFile<CR>
-noremap <Space>OP :action OpenFile<CR>
-noremap <Space>nP :action NewProject<CR>
-noremap <Space>NP :action NewProject<CR>
+noremap <Space>cp :action CloseProject<CR>
+noremap <Space>op :action OpenFile<CR>
+noremap <Space>np :action NewProject<CR>
 noremap <Space>mp :action ManageRecentProjects<CR>
 noremap <Space>mg :action MergeAllWindowsAction<CR>
 
@@ -90,6 +92,9 @@ noremap <Space>rn :action RunClass<CR>
 noremap <Space>dd :action Debug<CR>
 noremap <Space>dn :action DebugClass<CR>
 noremap <Space>sp :action Stop<CR>
+
+""""""""""""""""""""""""""""""""""""Git""""""""""""""""""""""""""""""""""""""
+noremap <Space>gb :action Git.Branches<CR>
 
 " Reload .ideavimrc without restarting the IDE
 nmap <Space>ir <Action>(IdeaVim.ReloadVimRc.reload)
