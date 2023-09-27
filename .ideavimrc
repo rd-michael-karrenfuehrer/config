@@ -11,8 +11,6 @@ set scrolloff=8
 set incsearch
 set ignorecase
 set smartcase
-set showmode
-set ideastrictmode
 set visualbell
 set noerrorbells
 set idearefactormode=keep
@@ -25,10 +23,8 @@ set number
 map Q gq
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-set surround
 set ideajoin
 set highlightedyankq
-set commentary
 set NERDTree
 
 " --- Custom mappings
@@ -39,8 +35,8 @@ nnoremap <Space>r :action RecentFiles<CR>
 """""""""""""""""""""""""""""""""""""formatting"""""""""""""""""""""""""""""""""""""
 nnoremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
-nnoremap ?? :action OptimizeImports<CR>
-vnoremap ?? :action OptimizeImports<CR>
+nnoremap -- :action OptimizeImports<CR>
+vnoremap -- :action OptimizeImports<CR>
 
 """"""""""""""""""""""""""""""""""""""Comments"""""""""""""""""""""""""""""""""""""
 nnoremap cc :action CommentByLineComment<CR>
@@ -55,8 +51,6 @@ noremap <Space>ip :action IntroduceParameter<CR>
 noremap <Space>if :action IntroduceField<CR>
 noremap <Space>ef :action ExtractFunction<CR>
 noremap <Space>gg :action Generate<CR>
-noremap <Space>t :action ActivateTerminalToolWindow<CR>
-noremap <Space>h :action LocalHistory.ShowHistory<CR>
 
 """"""""""""""""""""""""""""""""""""""Split Window"""""""""""""""""""""""""""""""""""""
 nnoremap <Space>sv :action SplitVertically<CR>
@@ -78,6 +72,8 @@ noremap <Space>tt mm`m:action GotoTest<CR>
 noremap <Space>cc mm`m:action GotoClass<CR>
 noremap <Space>aa mm`m:action GotoFile<CR>
 noremap <Space>ff mm`m:action SearchEverywhere<CR>
+noremap <Space>t :action ActivateTerminalToolWindow<CR>
+noremap <Space>h :action LocalHistory.ShowHistory<CR>
 
 """"""""""""""""""""""""""""""""""""""Project""""""""""""""""""""""""""""""""""""""
 noremap <Space>cp :action CloseProject<CR>
