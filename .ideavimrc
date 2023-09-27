@@ -63,6 +63,7 @@ nnoremap <Space>sv :action SplitVertically<CR>
 nnoremap <Space>sh :action SplitHorizontally<CR>
 nnoremap <Space>sc :action UnsplitAll<CR>
 noremap <Space>v :action NextSplitter<CR>
+noremap <Space>so :action MoveEditorToOppositeTabGroup<CR>
 
 """""""""""""""""""""""""""""""""""""" Window"""""""""""""""""""""""""""""""""""""
 nnoremap <Space>wd :action ActivateDebugToolWindow<CR>
@@ -95,6 +96,11 @@ noremap <Space>sp :action Stop<CR>
 
 """"""""""""""""""""""""""""""""""""Git""""""""""""""""""""""""""""""""""""""
 noremap <Space>gb :action Git.Branches<CR>
+
+""""""""""""""""""""""""""""""""""""debug""""""""""""""""""""""""""""""""""""""
+noremap <Space>db :action ToggleLineBreakpoint<CR>
+noremap <Space>qe :action EvaluateExpression <CR>
+noremap <Space>dr :action Resume<CR>
 
 " Reload .ideavimrc without restarting the IDE
 nmap <Space>ir <Action>(IdeaVim.ReloadVimRc.reload)
