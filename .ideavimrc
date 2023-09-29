@@ -13,7 +13,6 @@ set ignorecase
 set smartcase
 set visualbell
 set noerrorbells
-set idearefactormode=keep
 
 "set line numbers to relativ and current position to the actual line"
 set relativenumber
@@ -31,6 +30,11 @@ set NERDTree
 nnoremap gp :NERDTree <CR>
 nnoremap <Space>z :action ToggleZenMode<CR>
 nnoremap <Space>r :action RecentFiles<CR>
+
+map D <C-d>zz
+map U <C-u>zz
+map n nzz
+map N Nzz
 
 """""""""""""""""""""""""""""""""""""formatting"""""""""""""""""""""""""""""""""""""
 nnoremap == :action ReformatCode<CR>
