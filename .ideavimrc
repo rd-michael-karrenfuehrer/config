@@ -27,9 +27,9 @@ set highlightedyankq
 set NERDTree
 
 " --- Custom mappings
-nnoremap gp :NERDTree <CR>
-nnoremap <Space>z :action ToggleZenMode<CR>
-nnoremap <Space>r :action RecentFiles<CR>
+noremap gp :NERDTree <CR>
+noremap <Space>z :action ToggleZenMode<CR>
+noremap <Space>r :action RecentFiles<CR>
 
 map D <C-d>zz
 map U <C-u>zz
@@ -37,13 +37,13 @@ map n nzz
 map N Nzz
 
 """""""""""""""""""""""""""""""""""""formatting"""""""""""""""""""""""""""""""""""""
-nnoremap == :action ReformatCode<CR>
+noremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
-nnoremap -- :action OptimizeImports<CR>
+noremap -- :action OptimizeImports<CR>
 vnoremap -- :action OptimizeImports<CR>
 
 """"""""""""""""""""""""""""""""""""""Comments"""""""""""""""""""""""""""""""""""""
-nnoremap cc :action CommentByLineComment<CR>
+noremap cc :action CommentByLineComment<CR>
 vnoremap cc :action CommentByLineComment<CR>
 
 """"""""""""""""""""""""""""""""""""""Refactoring""""""""""""""""""""""""""""""""""""""
@@ -57,15 +57,15 @@ noremap <Space>ef :action ExtractFunction<CR>
 noremap <Space>gg :action Generate<CR>
 
 """"""""""""""""""""""""""""""""""""""Split Window"""""""""""""""""""""""""""""""""""""
-nnoremap <Space>sv :action SplitVertically<CR>
-nnoremap <Space>sh :action SplitHorizontally<CR>
-nnoremap <Space>sc :action UnsplitAll<CR>
+noremap <Space>sv :action SplitVertically<CR>
+noremap <Space>sh :action SplitHorizontally<CR>
+noremap <Space>sc :action UnsplitAll<CR>
 noremap <Space>v :action NextSplitter<CR>
 noremap <Space>so :action MoveEditorToOppositeTabGroup<CR>
 
 """""""""""""""""""""""""""""""""""""" Window"""""""""""""""""""""""""""""""""""""
-nnoremap <Space>wd :action ActivateDebugToolWindow<CR>
-nnoremap <Space>wr :action ActivateRunToolWindow<CR>
+noremap <Space>wd :action ActivateDebugToolWindow<CR>
+noremap <Space>wr :action ActivateRunToolWindow<CR>
 noremap <Space><Space> :action HideAllWindows<CR>
 
 """"""""""""""""""""""""""""""""""""""Navigation"""""""""""""""""""""""""""""""""""""
@@ -87,7 +87,7 @@ noremap <Space>mp :action ManageRecentProjects<CR>
 noremap <Space>mg :action MergeAllWindowsAction<CR>
 
 """"""""""""""""""""""""""""""""""""Run""""""""""""""""""""""""""""""""""""""
-nnoremap <Space>rc :action RunConfiguration<CR>
+noremap <Space>rc :action RunConfiguration<CR>
 noremap <Space>rr :action Run<CR>
 noremap <Space>rn :action RunClass<CR>
 noremap <Space>dd :action Debug<CR>
